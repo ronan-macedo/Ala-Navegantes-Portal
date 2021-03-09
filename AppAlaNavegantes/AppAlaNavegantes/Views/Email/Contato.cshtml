@@ -1,0 +1,31 @@
+﻿@model EmailModel
+@{
+    ViewData["Title"] = "Contato";
+}
+
+<h1 class="display-4">Contato</h1>
+<hr />
+<div class="container">
+    <form asp-action="Contato">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="form-group">
+            <label asp-for="Name" class="control-label"></label>
+            <input type="text" asp-for="Name" class="form-control" />
+            <span asp-validation-for="Name" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Subject"></label>
+            <input type="text" asp-for="Subject" class="form-control" />
+            <span asp-validation-for="Subject" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Message"></label>
+            <textarea asp-for="Message" class="form-control" rows="10"></textarea>
+            <span asp-validation-for="Message" class="text-danger"></span>
+        </div>
+        <p class="small">O e-mail será direcionado ao bispado, por favor não incluir assuntos demasidamente extensos ou pessoais.</p>
+        <hr />
+        <button type="submit" value="SendEmail" class="btn font-weight-bold">Enviar</button>
+    </form>
+</div>
+

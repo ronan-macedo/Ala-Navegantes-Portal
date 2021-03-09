@@ -1,0 +1,186 @@
+﻿@inject Microsoft.Extensions.Options.IOptions<LinkModel> linkModel
+@{
+    ViewData["Title"] = "Home";
+
+    LinkModel link = linkModel.Value;
+}
+
+<div class="container">
+    <div class="text-center">
+        <h1 class="display-4">Portal de Reuniões e Contato</h1>
+        <p>Ala Navegantes I - Estaca Navegantes</p>
+        <p>A Igreja de Jesus Cristo dos Santos dos Últimos Dias</p>
+    </div>
+    <hr />
+    <div id="images" class="m-auto align-items-center">
+        <div id="slider" class="carousel slide" data-ride="carousel">
+            @* Indicadores *@
+            <ol class="carousel-indicators">
+                <li data-target="#slider" data-slide-to="0" class="active"></li>
+                <li data-target="#slider" data-slide-to="1"></li>
+                <li data-target="#slider" data-slide-to="2"></li>
+            </ol>
+
+            @* Avançar pelos Slides *@
+            <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                    <img src="~/img/temple.png" alt="site-igreja" />
+                    <div class="carousel-caption">
+                        <h3 class="text-dark">Acesse o site oficial da Igreja!</h3>
+                        <a class="text-dark text-decoration-none" href="https://www.churchofjesuschrist.org/?lang=por" target="_blank">churchofjesuschrist.org</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/scripture.png" alt="biblioteca-evangelho" />
+                    <div class="carousel-caption">
+                        <h3 class="text-dark">Acesse os recursos de estudo na Biblioteca do Evangelho</h3>
+                        <a class="text-dark text-decoration-none" href="https://www.churchofjesuschrist.org/study?lang=por" target="_blank">Biblioteca do Evangelho</a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="~/img/missionary.png" alt="missionarios" />
+                    <div class="carousel-caption">
+                        <h3 class="text-dark">Fale com os missionários agora mesmo!</h3>
+                        <a class="text-dark text-decoration-none" href="https://www.vindeacristo.org/formularios/solicitar-uma-visita-dos-missionarios" target="_blank">Solicitar Visita</a>
+                    </div>
+                </div>
+            </div>
+
+            @* Controles de Direita e Esquerda *@
+            <a class="left carousel-control" href="#slider" role="button" data-slide="prev">
+                <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                <span class="sr-only">Anterior</span>
+            </a>
+            <a class="right carousel-control" href="#slider" role="button" data-slide="next">
+                <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                <span class="sr-only">Próximo</span>
+            </a>
+        </div>
+    </div>
+    <hr />
+    <div class="text-left">
+        <h4 class="font-weight-bold">Links para as Reuniões:</h4>
+    </div>
+    <section class="text-center align-content-around">
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h3>Reunião Sacramental e Quinto Domingo</h3>
+                <p>Domingos às 8:30 (Sacramental)</p>
+                <p>Domingo às 10:30 (Quinto Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.Sacramental" target="_blank">
+                    <img class="img-thumbnail" src="~/img/chapel.png" alt="reuniao-sacramental" />
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Quórum de Elderes</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Segundo e Quarto Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.QuorumElderes" target="_blank">
+                    <img class="img-thumbnail" src="~/img/eldersquorum.png" alt="quorum-elderes" />
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Sociedade de Socorro</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Segundo e Quarto Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.SocidadeSocorro" target="_blank">
+                    <img class="img-thumbnail" src="~/img/reliefsociety.png" alt="sociedade-socorro" />
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Sacerdócio Aarônico</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Segundo e Quarto Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.SacerdocioAaronico" target="_blank">
+                    <img class="img-thumbnail" src="~/img/youngmen.png" alt="rapazes" />
+                </a>
+            </div>
+        </div>
+        <div class="row mt-3">
+            <div class="col-md-6">
+                <h3>Moças</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Segundo e Quarto Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.Mocas" target="_blank">
+                    <img class="img-thumbnail" src="~/img/youngwoman.png" alt="mocas" />
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Primária</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Mesmo Horário Todos os Domingos)</p>
+                <a class="text-dark text-decoration-none" href="@link.Primaria" target="_blank">
+                    <img class="img-thumbnail" src="~/img/primary.png" alt="primaria" />
+                </a>
+            </div>
+            <div class="col-md-6">
+                <h3>Escola Dominical</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Primeiro e Terceiro Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.EscolaDominical" target="_blank">
+                    <img class="img-thumbnail" src="~/img/sundayschool.png" alt="escola-dominical" />
+                </a>
+                <div class="row">
+                    <div class="m-auto">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modalOne">
+                            Registrar Frequência
+                        </button>
+                    </div>
+                </div>
+                <div id="modalOne" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Registro de Frequência</h4>                            
+                            </div>
+                            <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="@link.FrequenciaEscDomAdultos">
+                                        Carregando...
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <h3>Escola Dominical - Jovens</h3>
+                <p>Domingos às 10:30</p>
+                <p>(Primeiro e Terceiro Domingo do Mês)</p>
+                <a class="text-dark text-decoration-none" href="@link.EscolaDominicalJovens" target="_blank">
+                    <img class="img-thumbnail" src="~/img/sundayschoolyouth.png" alt="escola-dominical-jovens" />
+                </a>
+                <div class="row">
+                    <div class="m-auto">
+                        <button type="button" class="btn" data-toggle="modal" data-target="#modalTwo">
+                            Registrar Frequência
+                        </button>
+                    </div>
+                </div>
+                <div id="modalTwo" class="modal fade" role="dialog">
+                    <div class="modal-dialog modal-dialog-centered modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h4 class="modal-title">Registro de Frequência</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="embed-responsive embed-responsive-4by3">
+                                    <iframe class="embed-responsive-item" src="@link.FrequenciaEscDomJovens">
+                                        Carregando...
+                                    </iframe>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>

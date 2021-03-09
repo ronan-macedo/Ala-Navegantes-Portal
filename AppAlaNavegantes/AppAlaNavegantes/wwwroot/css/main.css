@@ -1,0 +1,92 @@
+﻿/*
+    General styles
+*/
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+header nav {
+    background-image: linear-gradient(#C6EFF5, #67D4E4, #01B6D1);
+}
+
+
+header nav a {
+    font-size: 1.2em;
+}
+
+header nav .navbar-brand {
+    font-size: 1.5em;
+}
+
+.container form button {
+    border: 1em solid #01B6D1;
+    background-color: #01B6D1;
+    color: white;
+    margin-bottom: 1.25em;
+}
+
+footer {
+background-color: #F1F1F3;
+}
+
+.carousel-inner div {
+    background-color: #F1F1F3;
+    border-radius: 5px;
+    box-shadow: #F1F1F3 10px 10px inset;
+}
+
+.page-link {
+    background-color: #01B6D1;
+    border-radius: 5px;
+    color: white;
+}
+
+.row .m-auto button {
+    border: 1em solid #01B6D1;
+    background-color: #01B6D1;
+    color: white;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+/*
+    Styles for small devices view
+*/
+@media (max-width: 768px) {
+    #images .item h3 {
+        font-size: medium;
+    }
+
+    header nav a {
+        margin-left: 1.2em;
+    }
+
+    .container form button {
+        width: 100%;
+        font-size: large;
+    }
+
+    .row .m-auto button {
+        width: 100%;
+        font-size: large;
+    }
+}
+
+/*
+    Styles for desktop view
+*/
+@media (min-width: 768px) {
+    #images {
+        width: 640px;
+    }
+
+    .container form button {
+        padding: 0 1.5em 0 1.5em;
+        font-size: medium;
+    }
+
+    .row .m-auto button {
+        padding: 0 1.5em 0 1.5em;
+        font-size: medium;
+    }
+}
